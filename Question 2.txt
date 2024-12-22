@@ -1,0 +1,11 @@
+#!/bin/bash
+
+echo "Enter the directory path: "
+read dir_path
+
+if [ -d "$dir_path" ]; then
+    echo "Directory exists"
+else
+    mkdir -p "$dir_path"
+    echo "Directory created"
+fi

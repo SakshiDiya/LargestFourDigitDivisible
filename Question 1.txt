@@ -1,0 +1,14 @@
+bhavin@dac-07:~$ tail -5 /etc/passwd
+syslog:x:104:111::/home/syslog:/usr/sbin/nologin
+_apt:x:105:65534::/nonexistent:/usr/sbin/nologin
+uuidd:x:106:112::/run/uuidd:/usr/sbin/nologin
+tcpdump:x:107:113::/nonexistent:/usr/sbin/nologin
+bhavin:x:1000:1000:,,,:/home/bhavin:/bin/bash
+bhavin@dac-07:~$ ls > files.txt
+bhavin@dac-07:~$ chmod 750 files.txt
+bhavin@dac-07:~$ useradd dac2
+useradd: Permission denied.
+useradd: cannot lock /etc/passwd; try again later.
+bhavin@dac-07:~$ chgrp dac2 files.txt
+chgrp: invalid group: ‘dac2’
+bhavin@dac-07:~$
